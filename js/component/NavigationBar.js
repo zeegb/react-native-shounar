@@ -25,7 +25,7 @@ export default class NavigationBar extends Component {
     const { title, leftBtnIcon, leftBtnText, leftBtnPress, rightBtnIcon, rightBtnText, rightBtnPress } = this.props;
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor={theme.mainThemeColor} />
+        <StatusBar translucent={false} backgroundColor={theme.mainThemeColor} />
         <View style={[styles.toolbar, {backgroundColor: theme.mainThemeColor}]}>
           <View style={styles.fixedCell}>
             {(leftBtnIcon || leftBtnText)
@@ -80,7 +80,8 @@ const styles = StyleSheet.create({
   container: {
     height: theme.toolbar.height + px2dp(4),
     width: theme.screenWidth,
-    backgroundColor: 'rgba(0,0,0,0)'
+    backgroundColor: 'rgba(0,0,0,0)',
+    alignItems: 'flex-end'
   },
   toolbar: {
     height: theme.toolbar.height,
