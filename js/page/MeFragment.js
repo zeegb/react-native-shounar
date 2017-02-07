@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, BackAndroid, StyleSheet } from 'react-native';
+import SignInPage from './SignInPage';
 
 export default class MeFragment extends Component {
+  static propTypes = {
+    navigator: React.PropTypes.object
+  }
+
   constructor(props) {
     super(props);
 
@@ -12,6 +17,9 @@ export default class MeFragment extends Component {
     BackAndroid.addEventListener('hardwareBackPress', function () {
       BackAndroid.exitApp(0);
       return true;
+    });
+    this.props.navigator.push({
+      component: SignInPage
     });
   }
 

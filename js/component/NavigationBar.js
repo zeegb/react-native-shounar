@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
   toolbar: {
     height: theme.toolbar.height,
     flexDirection: 'row',
+    justifyContent: 'space-between',
     paddingTop: Platform.OS === 'android' ? 0 : px2dp(6),
     elevation: 3,
     shadowColor: 'rgb(0,0,0)',
@@ -94,8 +95,6 @@ const styles = StyleSheet.create({
     shadowRadius: 3
   },
   fixedCell: {
-    width: theme.toolbar.height,
-    height: theme.toolbar.height,
     flexDirection: 'row'
   },
   centerCell: {
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    width: theme.toolbar.height,
+    width: theme.toolbar.width,
     height: Platform.OS === 'android' ? theme.toolbar.height : theme.toolbar.height - px2dp(6)
   },
   btnText: {

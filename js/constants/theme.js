@@ -17,6 +17,7 @@ export default {
   },
   toolbar: {
     height: Platform.OS === 'android' ? px2dp(40) : px2dp(49),
+    width: Platform.OS === 'android' ? px2dp(60) : px2dp(60),
     paddingTop: Platform.Version >= 21 ? px2dp(20) : 0,
     titleColor: '#fff',
     titleSize: Platform.OS === 'android' ? px2dp(16) : px2dp(14),
